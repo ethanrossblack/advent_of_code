@@ -42,6 +42,17 @@ def next_value(nums)
   nums[0][-1]
 end
 
+def previous_value(nums)
+  nums = all_sequences(nums)
+  steps = nums.length
+
+  (steps - 1).downto(1) do |i|
+    nums[i - 1].unshift(nums[i-1][0] - nums[i][0])
+  end
+
+  nums[0][0]
+end
+
 # Read each line of the input, turn it into an array, and add "next_value(line)" to a variable
 # return the variable
 
