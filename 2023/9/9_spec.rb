@@ -62,5 +62,21 @@ RSpec.describe "Advent of Code Day 9" do
         expect(next_value(three)).to eq(three_expected)
       end
     end
+    
+    describe "#previous_value" do
+      it "returns the previous expected value in the sequence" do
+        one = [0,3,6,9,12,15]
+        one_expected = -3
+        expect(previous_value(one)).to eq(one_expected)
+        
+        two = [1,3,6,10,15,21]
+        two_expected = 0
+        expect(previous_value(two)).to eq(two_expected)
+        
+        three = [10,13,16,21,30,45]
+        three_expected = 5
+        expect(previous_value(three)).to eq(three_expected)
+      end
+    end
   end
 end
