@@ -58,11 +58,14 @@ end
 
 nine_input = File.new("./9_input.txt")
 
-return_value = 0
+p1_return_value = 0
+p2_return_value = 0
 
 nine_input.each_line do |line|
   line = line.split.map(&:to_i)
-  return_value += next_value(line)
+  p1_return_value += next_value(line)
+  p2_return_value += previous_value(line)
 end
 
-puts "Part 1 Answer: #{return_value}" # 2098530125
+puts "Part 1 Answer: #{p1_return_value}" # 2098530125
+puts "Part 2 Answer: #{p2_return_value}" # 1016
