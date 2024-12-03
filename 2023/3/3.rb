@@ -12,6 +12,23 @@ class EngineSchematic
       @grid << line.strip.split("")
     end
   end
+
+  def sum_part_numbers
+
+  end
+
+  private
+
+  def find_numbers(row)
+    numbers = []
+
+    row.each_with_index do |e, i|
+      if %w[0 1 2 3 4 5 6 7 8 9].includes(e)
+        starting_index = i
+        require "pry"; binding.pry
+      end
+    end
+  end
 end
 
 

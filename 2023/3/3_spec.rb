@@ -27,7 +27,15 @@ RSpec.describe "Advent of Code 2023 Day 3: Gear Ratuis" do
         
         expect(schematic.grid).to be_an Array
         expect(schematic.grid).to_not be_empty
-        require "pry"; binding.pry
+      end
+    end
+
+    describe "#sum_part_numbers" do
+      it "returns the sum of all of the valid part numbers" do
+        schematic = EngineSchematic.new
+        schematic.import_grid(File.new("./test_input.txt"))
+
+        expect(schematic.sum_part_numbers).to eq(4361)
       end
     end
   end
